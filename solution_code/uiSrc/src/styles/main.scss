@@ -1,0 +1,74 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: $headings-font;
+}
+
+// .container {
+//   width: 100%;
+//   padding: 50px;
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-template-rows: repeat(auto-fill);
+//   grid-gap: 1em;
+
+//   > div {
+//     padding: 20px 40px;
+//     max-width: 500px;
+//     border-radius: 8px;
+
+//     -webkit-box-shadow: $box-shadow;
+//     -moz-box-shadow: $box-shadow;
+//     box-shadow: $box-shadow;
+
+//     background-color: #f2f1f1;
+//   }
+// }
+
+// .form {
+//   width: 50%;
+//   margin: 0 auto;
+//   padding: 1em;
+//   background-color: $blue;
+//   .form-group {
+//     display: flex;
+//     justify-content: space-between;
+//     height: 2em;
+//     margin: 1em 0;
+
+//     .label {
+//       width: 25%;
+//     }
+
+//     input {
+//       width: 75%;
+//     }
+//   }
+
+//   input[type='submit'] {
+//     background-color: $blue;
+//     border: none;
+//     color: white;
+//     padding: 16px 32px;
+//     text-decoration: none;
+//     margin: 4px 2px;
+//     cursor: pointer;
+//   }
+// }
+
+
+.head-card{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: $blue;
+  img {
+height: 100px;
+  }
+}

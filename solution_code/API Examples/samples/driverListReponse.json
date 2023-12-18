@@ -1,0 +1,40 @@
+{
+    "Count": 3,
+    "Message": "Response returned successfully",
+    "SearchCriteria": null,
+    "Results": [
+        {
+            "id": 2,
+            "first_name": "Judie",
+            "last_name": "Mungin",
+            "email": "jmungin1@dion.ne.jp",
+            "street": "231 Arapahoe Court",
+            "city": "Lingqian",
+            "state": "Virginia",
+            "licenseNumber": "13c9be70-f5ea-428d-9781-b8f1d056d1c9",
+            "licenseExpire": "12/7/2022"
+        },
+        {
+            "id": 3,
+            "first_name": "Trent",
+            "last_name": "Kintzel",
+            "email": "tkintzel2@bizjournals.com",
+            "street": "6583 Kingsford Place",
+            "city": "Tornio",
+            "state": "Virginia",
+            "licenseNumber": "ee817a81-a013-4778-a0cc-d4976971fdee",
+            "licenseExpire": "6/4/2024"
+        },
+        {
+            "id": 4,
+            "first_name": "Torey",
+            "last_name": "Crummay",
+            "email": "tcrummay3@yahoo.co.jp",
+            "street": "244 7th Alley",
+            "city": "Rakek",
+            "state": "Virginia",
+            "licenseNumber": "b45c7ca3-343a-4751-8283-4ed0f4f61934",
+            "licenseExpire": "1/1/2027"
+        }
+    ]
+}

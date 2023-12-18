@@ -1,0 +1,25 @@
+@import 'variables';
+
+.not-found {
+  width: 500px;
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h1,
+  p {
+    font-family: $headings-font;
+    text-align: center;
+
+    &.status-code {
+      margin-top: 16px;
+      font-size: 8em;
+      font-weight: bold;
+    }
+  }
+}

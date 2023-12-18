@@ -1,0 +1,46 @@
+{
+    "port":3001,
+    "cors":{
+        "allowedOrigins":["http://dmv.localdev","http://localhost"]
+    },
+    "init":{
+        "onLoad": true,
+        "rebuildData": true
+    },
+
+    "nhtsa":{
+        "runInitialLoad":true,
+        "allMakesAPI":"https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json",
+        "modelsAPI":"https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/{makeID}?format=json"
+    },
+    "logging": {
+        "level": "info",
+        "file": {
+            "enabled": false,
+            "location": "combined.log"
+        },
+        "cloudwatch": {
+            "enabled": false,
+            "logGroupName": "",
+            "logStreamName": ""
+        }
+    },
+    "aws": {
+        "credentials": {
+            "accessKeyId": "",
+            "secretAccessKey": ""
+        },
+        "region": "us-east-1"
+    },
+    "database": {
+        "mysql_host": "localhost",
+        "mysql_port": 3306,
+        "mysql_database": "vehicle",
+        "mysql_username": "dbu",
+        "mysql_password": "aPassword",
+        "useSSL": false,
+        "connectionLimit": 151,
+        "queueLimit": 0,
+        "prefix": "pre"
+      }
+}

@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "5bbabde7-17c0-476c-8786-b7990d36f185",
+		"name": "ModelApplicationDMV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "Get Models by Make IDS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Make_ID\": [441]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/vehicle/model/get",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"vehicle",
+								"model",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Makes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/vehicle/make/get",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"vehicle",
+								"make",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plate",
+			"item": [
+				{
+					"name": "Add Plate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"vin\": \"JH4NA21683T088489\",\r\n        \"Make_Id\": 1861,\r\n        \"Model_Id\": 440,\r\n        \"plateText\": \"TYUC0RP\",\r\n        \"driver_id\": 86\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/plate/add",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"plate",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Plate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Action\": \"UPDATE\",\r\n    \"Plate\": {\r\n        \"id\": 5,\r\n        \"vin\": \"JH4NA21683T088489\",\r\n        \"Make_Id\": \"8359\",\r\n        \"Model_Id\": 22202,\r\n        \"plateText\": \"TYUC0RP\",\r\n        \"driver_id\": 86\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/plate/update",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"plate",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Plates by Drive IDs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"driver_ids\":[86,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/plate/get",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"plate",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "Get Drivers by IDs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"driver_ids\":[3,4]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/driver/get",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"driver",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Drivers(sorted/filtered)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sort\": [\r\n        {\r\n            \"last_name\": \"asc\"\r\n        },\r\n        {\r\n            \"first_name\": \"desc\"\r\n        }\r\n    ],\r\n    \"limit\": {\r\n        \"skip\": 10,\r\n        \"numberPerPage\": 10\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/driver/list",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"driver",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Action\": \"UPDATE\",\r\n    \"Driver\": {\r\n        \"id\": 3,\r\n        \"first_name\": \"Trent\",\r\n        \"last_name\": \"Kintzel\",\r\n        \"email\": \"tkintzel2@bizjournals.com\",\r\n        \"street\": \"6583 Kingsford Place\",\r\n        \"city\": \"Tornio\",\r\n        \"state\": \"Virginia\",\r\n        \"licenseNumber\": \"ee817a81-a013-4778-a0cc-d4976971fdee\",\r\n        \"licenseExpire\": \"6/4/2024\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/driver/update",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"driver",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"first_name\": \"Trent\",\r\n        \"last_name\": \"Kintzel\",\r\n        \"email\": \"tkintzel2@bizjournals.com\",\r\n        \"street\": \"6583 Kingsford Place\",\r\n        \"city\": \"Tornio\",\r\n        \"state\": \"Virginia\",\r\n        \"licenseNumber\": \"ee817a81-a013-4778-a0cc-d4976971fdee\",\r\n        \"licenseExpire\": \"6/4/2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dmv.localdev/api/driver/add",
+							"protocol": "http",
+							"host": [
+								"dmv",
+								"localdev"
+							],
+							"path": [
+								"api",
+								"driver",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "nhsta",
+			"item": [
+				{
+					"name": "Get all makes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json",
+							"protocol": "https",
+							"host": [
+								"vpic",
+								"nhtsa",
+								"dot",
+								"gov"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"getallmakes"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Models for Make",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/11897?format=json",
+							"protocol": "https",
+							"host": [
+								"vpic",
+								"nhtsa",
+								"dot",
+								"gov"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"GetModelsForMakeId",
+								"11897"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

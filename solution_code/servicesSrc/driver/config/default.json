@@ -1,0 +1,43 @@
+{
+    "port":3002,
+    "cors":{
+        "allowedOrigins":["http://dmv.localdev","http://localhost"]
+    },
+    "init":{
+        "onLoad": true
+    },
+
+    "plateAPI": {
+        "uri": "http://localhost:3003/"
+    },
+    "logging": {
+        "level": "info",
+        "file": {
+            "enabled": false,
+            "location": "combined.log"
+        },
+        "cloudwatch": {
+            "enabled": false,
+            "logGroupName": "",
+            "logStreamName": ""
+        }
+    },
+    "aws": {
+        "credentials": {
+            "accessKeyId": "",
+            "secretAccessKey": ""
+        },
+        "region": "us-east-1"
+    },
+    "database": {
+        "mysql_host": "localhost",
+        "mysql_port": 3306,
+        "mysql_database": "driver",
+        "mysql_username": "dbu",
+        "mysql_password": "aPassword",
+        "useSSL": false,
+        "connectionLimit": 151,
+        "queueLimit": 0,
+        "prefix": "pre"
+      }
+}
