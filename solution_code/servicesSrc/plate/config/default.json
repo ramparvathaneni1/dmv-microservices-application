@@ -1,7 +1,7 @@
 {
     "port":3003,
     "cors":{
-        "allowedOrigins":["http://dmv.localdev","http://localhost"]
+        "allowedOrigins":["http://dmv.localdev","http://localhost", "http://localhost:3000", "http://dmv.localdev:3000"]
     },
     "init":{
         "onLoad": true
